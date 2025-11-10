@@ -1,5 +1,7 @@
 package views;
 
+import models.Persona;
+
 public class ShowConsole {
 
     public ShowConsole(){
@@ -33,4 +35,38 @@ public class ShowConsole {
         }
     }
 
+    public static void showPersonaResult(Persona resultadoPer, String name) {
+        if(resultadoPer != null) {
+            System.out.println("La persona {" + name + "} existe. Edad: " + resultadoPer.getAge());
+        } else {
+            System.out.println("Error -> La persona {" + name + "} NO se encontro");
+        }
+    }
+    /* 
+    Operadores ternarios 
+    public static void showPersonaResult(Persona resultadoPer, String name) {
+        System.out.println(
+            resultadoPer != null 
+            ? "Se encontro a " + resultadoPer
+            : "No se encontro a un persona con el nombre " + name);
+
+    }
+    */
+    
+    public static void showPersonaResult(Persona resultadoPer, int age) {
+        if(resultadoPer != null) {
+            System.out.println("La persona {" + resultadoPer.getName() + "} existe. Edad Imapar : " + age);
+        } else {
+            System.out.println("No hay personas con edades impares. ");
+        }
+    }
+
+    public static void showPersonaValueResult(Persona resultadoPer, int valor) {
+
+        if(resultadoPer != null) {
+            System.out.println("Persona {" + resultadoPer.getName() + "} encontrada con el valor: " + valor);
+        } else {
+            System.out.println("No se encontró persona con el valor: " + valor);
+        }
+    }
 }
